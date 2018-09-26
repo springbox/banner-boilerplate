@@ -1,9 +1,156 @@
-<!-- Make sure you use the correct tags for the correct jobs.
-If you are separating your ad into different sections, use the section tag. -->
-<section id="frame1" class="centerV">
+<div class="adBanner" onclick="adClick();">
+  <script>
+    function adClick() {
+      console.log('clicked!')
+    }
+  </script>
+  <style>
+    @-webkit-keyframes grow-1 {
+      0% {
+        transform:scale(0);
+      }
+      5% {
+        transform:scale(1);
+      }
+      30% {
+        transform:scale(1);
+      }
+      33% {
+        transform:scale(0);
+      }
+      100% {
+        transform:scale(0);
+      }
+    }
+    @-webkit-keyframes grow-2 {
+      0% {
+        transform:scale(0);
+      }
+      33% {
+        transform:scale(0);
+      }
+      38% {
+        transform:scale(1);
+      }
+      60% {
+        transform:scale(1);
+      }
+      66% {
+        transform:scale(0);
+      }
+      100% {
+        transform:scale(0)
+      }
+    }
+    @-webkit-keyframes grow-3 {
+      0% {
+        transform:scale(0);
+      }
+      66% {
+        transform:scale(0);
+      }
+      70% {
+        transform:scale(1);
+      }
+      95% {
+        transform:scale(1);
+      }
+      100% {
+        transform:scale(1);
+      }
+    }
+    .adBanner {
+      width: 300px;
+      height: 250px;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+    }
 
-  <p>Oh my!</p>
-  <p>fully animated text that wraps around!</p>
-  <p>Webfonts for the win!</p>
+    .backgroundImage {
+      background: url(images/lady.png) no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
 
-</section>
+    .bubble {
+      height: auto;
+      width: auto;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      border-radius: 35px;
+      opacity: 0.8;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .dogEar {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: -25px;
+      right: 35px;
+    }
+
+    .dogEar-1 {
+      background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
+    }
+
+    .dogEar-2 {
+      background-image: linear-gradient(-45deg, transparent 50%, #555559 50%);
+    }
+
+    .dogEar-3 {
+      background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
+    }
+
+    .bubble-1 {
+      animation: grow-1 15s ease-in .5s 1 normal both running;
+      background-color: #76A2CD;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 6px;
+      margin-left: 20px;
+    }
+
+    .bubble-2 {
+      animation: grow-2 15s ease-in .5s 1 normal both running;
+      background-color: #555559;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+
+    .bubble-3 {
+      animation: grow-3 15s ease-in .5s 1 normal both running;
+      background-color: #14814E;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 6px;
+      margin-left: 20px;
+    }
+  </style>
+  <div class="backgroundImage">
+
+  </div>
+  <div class="bubble bubble-1">
+    <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
+    <div class="quote">--- Current LawPay Customer</div>
+    <div class="dogEar dogEar-1"></div>
+  </div>
+  <div class="bubble bubble-2">
+    <i class="icon-money">.</i>
+    <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
+    <div class="dogEar dogEar-2"></div>
+  </div>
+  <div class="bubble bubble-3">
+    <i class="icon-pay">.</i>
+    <p>Choose the #1 payment solution trusted by lawyers</p>
+    <button>Learn More</button>
+    <div class="dogEar dogEar-3"></div>
+  </div>
+
+</div>
