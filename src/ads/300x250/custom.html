@@ -62,10 +62,31 @@
 
     @-webkit-keyframes hideBackground {
       0% {
-        opacity: 1;
+        background-position-y: initial;
+      }
+      4.9% {
+        background-position-y: initial;
+      }
+      5% {
+        background-position-y: 250px;
       }
       100% {
-        opacity: 0;
+        background-position-y: 250px;
+      }
+    }
+
+    @-webkit-keyframes showBubble {
+      0% {
+        top: -250px;
+      }
+      4.9% {
+        top: -250px;
+      }
+      5% {
+        top: 0px;
+      }
+      100% {
+        top: 0px;
       }
     }
     .adBanner {
@@ -77,11 +98,16 @@
     }
 
     .backgroundImage {
-      animation: hideBackground 15s;
+      animation: hideBackground 15s normal both running;
       background: url(images/lady.png) no-repeat;
       width: 100%;
       height: 197px;
       position: relative;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
     }
 
     .bubble {
@@ -91,8 +117,9 @@
       -ms-transform: scale(0);
       transform: scale(0);
       border-radius: 35px;
-      opacity: 0.8;
+      /* opacity: 0.8; */
       padding: 20px;
+      padding-top: 32px;
       bottom: 0;
     }
 
@@ -113,6 +140,10 @@
       background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
     }
 
+    .dogEar-small {
+      background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
+    }
+
     .dogEar-2 {
       background-image: linear-gradient(-45deg, transparent 50%, #555559 50%);
     }
@@ -121,26 +152,32 @@
       background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
     }
 
+    .dogEar-small2 {
+      background-image: linear-gradient(45deg, transparent 50%, #14814E 50%);
+    }
+
     .bubble-1 {
-      animation: grow-1 15s ease-in .5s 1 normal both running;
+      animation: grow-1 15s ease-in 0s 1 normal both running;
       background-color: #76A2CD;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       margin-top: 6px;
       margin-left: 20px;
+      padding-top: 50px;
     }
 
     .bubble-2 {
-      animation: grow-2 15s ease-in .5s 1 normal both running;
+      animation: grow-2 15s ease-in 0s 1 normal both running;
       background-color: #555559;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
       margin-left: 20px;
-      margin-right: 10px;
+      margin-right: 20px;
+      padding-top: 52px;
     }
 
     .bubble-3 {
-      animation: grow-3 15s ease-in .5s 1 normal both running;
+      animation: grow-3 15s ease-in 0s 1 normal both running;
       background-color: #14814E;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -150,40 +187,104 @@
 
     .logo {
       height: 53px;
-      color: black;
+      display: flex;
+      align-items: center;
     }
 
     .outerbubble {
-      width: 125px;
-      height: 75px;
-      background-color: green;
+      animation: grow-1 15s ease-in 0s 1 normal both running;
+      width: 86px;
+      height: 37px;
+      background-color: #555559;
       border-radius: 15px;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
       position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .5;
+    }
+
+    .outerbubble-2 {
+      animation: grow-3 15s ease-in 0s 1 normal both running;
+      width: 86px;
+      height: 37px;
+      background-color: #76A2CD;
+      border-radius: 15px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .5;
+    }
+
+    .outerbubble-3 {
+      animation: grow-2 15s ease-in 0s 1 normal both running;
+      width: 97px;
+      height: 75px;
+      background-color: #76A2CD;
+      border-top-left-radius: 15px;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .5;
+      bottom: -53px;
+      right: 0;
+    }
+
+    button {
+      border-radius: 15px;
+      border: none;
+      background: #cc5500;
+      color: white;
+      padding: 5px 15px;
+      font-size: 9px;
+      letter-spacing: 0.25px;
+      text-transform: uppercase;
+    }
+
+    .button-holder {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo img {
+      padding-left: 20px;
     }
   </style>
   <div class="container">
     <div class="backgroundImage">
-      <div class="outerbubble"></div>
+      <div class="outerbubble">
+          <div class="dogEar dogEar-small"></div>
+      </div>
       <div class="bubble bubble-1">
         <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
         <div class="quote">--- Current LawPay Customer</div>
         <div class="dogEar dogEar-1"></div>
       </div>
+      <div class="outerbubble-3"></div>
       <div class="bubble bubble-2">
-        <i class="icon-money">.</i>
+        <div class="icon-money icon"><img src="./images/bill_Icon.png" /></div>
         <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
-        <div class="dogEar dogEar-2"></div>
+        <div class="dogEar dogEar-small"></div>
+      </div>
+      <div class="outerbubble-2">
+        <div class="dogEar dogEar-1"></div>
       </div>
       <div class="bubble bubble-3">
-        <i class="icon-pay">.</i>
+        <div class="icon-pay icon"><img src="./images/pay_Icon.png" /></div>
         <p>Choose the #1 payment solution trusted by lawyers</p>
-        <button>Learn More</button>
-        <div class="dogEar dogEar-3"></div>
+        <div class="button-holder">
+          <button>Learn More</button>
+        </div>
+        <div class="dogEar dogEar-small2"></div>
       </div>
     </div>
-    <div class="logo">I am the LawPay Logo</div>
+    <div class="logo"><img src="./images/Lawpay_logo.png" /></div>
   </div>
 
   <!-- <div class="bubble bubble-1">
