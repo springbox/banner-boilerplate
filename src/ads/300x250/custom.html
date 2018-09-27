@@ -59,6 +59,15 @@
         transform:scale(1);
       }
     }
+
+    @-webkit-keyframes hideBackground {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
     .adBanner {
       width: 300px;
       height: 250px;
@@ -68,6 +77,7 @@
     }
 
     .backgroundImage {
+      animation: hideBackground 15s;
       background: url(images/lady.png) no-repeat;
       width: 100%;
       height: 197px;
@@ -151,14 +161,12 @@
       border-top-right-radius: 0;
       border-top-left-radius: 0;
       position: absolute;
-      top: -53px;
-      left: -20px;
     }
   </style>
   <div class="container">
     <div class="backgroundImage">
+      <div class="outerbubble"></div>
       <div class="bubble bubble-1">
-        <div class="outerbubble"></div>
         <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
         <div class="quote">--- Current LawPay Customer</div>
         <div class="dogEar dogEar-1"></div>
