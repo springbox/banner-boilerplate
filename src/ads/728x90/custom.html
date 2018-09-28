@@ -124,14 +124,6 @@
       align-self: center;
     }
 
-    .icon-2 {
-      /* display: flex;
-      justify-content: center;
-      margin: 15px;
-      width: 30%;
-      align-self: center; */
-    }
-
     .container {
       height: 100%;
       background: white;
@@ -148,6 +140,10 @@
     }
 
     .dogEar-1 {
+      background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
+    }
+
+    .dogEar-left {
       background-image: linear-gradient(-45deg, transparent 50%, #76A2CD 50%);
     }
 
@@ -173,10 +169,8 @@
       position: absolute;
       -ms-transform: scale(0);
       transform: scale(0);
-      border-radius: 15px;
-      /* opacity: 0.8; */
-      /* padding: 20px;
-      padding-top: 32px; */
+      border-radius: 20px;
+      height: calc(100% - 3px);
       bottom: 0;
       right: 0;
       max-width: 560px;
@@ -189,11 +183,7 @@
       border-top-right-radius: 0;
       border-top-left-radius: 0;
       width: 68%;
-      height: calc(100% - 8px);
       bottom: 8px;
-      /* margin-top: 6px;
-      margin-left: 20px;
-      padding-top: 50px; */
       opacity: .8;
     }
 
@@ -205,7 +195,6 @@
       margin-left: 20px;
       margin-right: 20px;
       padding-top: 52px;
-      height: calc(100% - 8px);
       bottom: 8px;
       width: 540px;
     }
@@ -213,10 +202,12 @@
     .bubble-3 {
       animation: grow-3 15s ease-in 0s 1 normal both running;
       background-color: #14814E;
-      border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
       margin-top: 6px;
-      margin-left: 20px;
+      width: 520px;
+      margin-left: 10px;
+      margin-right: 21px;
     }
 
     .logo {
@@ -245,7 +236,7 @@
       animation: grow-3 15s ease-in 0s 1 normal both running;
       width: 86px;
       height: 37px;
-      background-color:  #14814E;
+      background-color: #76A2CD;
       border-radius: 15px;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
@@ -260,7 +251,7 @@
       animation: grow-2 15s ease-in 0s 1 normal both running;
       width: 127px;
       height: 75px;
-      background-color: #76A2CD;
+      background-color: #14814E;
       border-top-left-radius: 15px;
       position: absolute;
       -ms-transform: scale(0);
@@ -284,7 +275,9 @@
 
     .button-holder {
       display: flex;
-      justify-content: center;
+      height: 100%;
+      align-items: flex-end;
+      margin-bottom: 40px;
     }
 
     .content {
@@ -300,9 +293,18 @@
 
     .copy-2 {
       width: 28%;
+      margin-left: 20px;
     }
 
     .content-2 {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-3 {
       display: flex;
       flex-direction: row;
       height: 100%;
@@ -319,6 +321,10 @@
       margin-top: 0;
     }
 
+    .copy-3 {
+      width: 44%;
+    }
+
     .quote {
       font-size: 12px;
       text-align: right;
@@ -331,22 +337,23 @@
       align-items: center;
       height: 100%;
     }
+
+    .icon-pay {
+      margin: 0;
+    }
   </style>
   <div class="container">
     <div class="logo"><div><img src="./images/Lawpay_logo.png" /></div></div><!--
  --><div class="backgroundImage">
-      <!-- <div class="outerbubble">
-          <div class="dogEar dogEar-small"></div>
-      </div> -->
       <div class="bubble bubble-1">
         <div class="content">
           <div class="icon">
-            <img src="./images/bill_Icon.png" />
+            <img src="./images/pay_Icon.png" />
           </div>
           <div class="copy">
             <p>"Clients can pay for my services with just the click of a button."</p>
             <div class="quote">--- Current LawPay Customer</div>
-            <div class="dogEar dogEar-1"></div>
+            <div class="dogEar dogEar-left"></div>
           </div>
         </div>
       </div>
@@ -366,12 +373,17 @@
         <div class="dogEar dogEar-1"></div>
       </div>
       <div class="bubble bubble-3">
-        <div class="icon-pay icon"><img src="./images/pay_Icon.png" /></div>
-        <p>Choose the #1 payment solution trusted by lawyers</p>
-        <div class="button-holder">
-          <button>Learn More</button>
+        <div class="content-3">
+          <div class="icon-pay icon">
+            <img src="./images/stars_Icon.png" />
+          </div>
+          <div class="copy-3">
+            <p>The #1 payment solution trusted by lawyers</p>
+          </div>
+          <div class="button-holder">
+            <button>Learn More</button>
+          </div>
         </div>
-        <div class="dogEar dogEar-small2"></div>
       </div>
     </div>
   </div>
