@@ -59,7 +59,7 @@
           transform:scale(1);
         }
       }
-  
+
       @-webkit-keyframes hideBackground {
         0% {
           background-position-y: initial;
@@ -74,7 +74,7 @@
           background-position-y: 250px;
         }
       }
-  
+
       @-webkit-keyframes showBubble {
         0% {
           top: -250px;
@@ -89,48 +89,49 @@
           top: 0px;
         }
       }
-  
+
       * {
         white-space: normal;
       }
-  
+
       body {
         margin: 0;
       }
-  
+
       .adBanner {
-        width: 728px;
-        height: 90px;
+        width: 970px;
+        height: 250px;
         position: relative;
         font-family: sans-serif;
         color: white;
+        font-size: 30px;
       }
-  
+
       .backgroundImage {
         animation: hideBackground 15s normal both running;
         background: url(images/lady.png) no-repeat;
         width: 100%;
-        height: 90px;
-        width: 560px;
+        height: 250px;
+        width: 800px;
         position: relative;
         display: inline-block;
       }
-  
+
       .icon {
         display: flex;
         justify-content: center;
-        margin: 15px;
-        width: 30%;
+        /* margin: 15px; */
+        width: 23%;
         align-self: center;
       }
-  
+
       .container {
         height: 100%;
         background: white;
         white-space: nowrap;
         overflow: hidden;
       }
-  
+
       .dogEar {
         width: 25px;
         height: 25px;
@@ -138,31 +139,45 @@
         bottom: -25px;
         right: 35px;
       }
-  
+
+      .dogEar970 {
+        width: 61px;
+        height: 55px;
+        position: absolute;
+        bottom: -43px;
+        right: 35px;
+      }
+
       .dogEar-1 {
         background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
       }
-  
+
       .dogEar-left {
         background-image: linear-gradient(-45deg, transparent 50%, #76A2CD 50%);
       }
-  
+
+      .dogEar-left-2 {
+        background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
+      }
+    
       .dogEar-small {
         background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
+        bottom: -30px;
+        right: 173px;
       }
-  
+
       .dogEar-2 {
         background-image: linear-gradient(-45deg, transparent 50%, #555559 50%);
       }
-  
+
       .dogEar-3 {
         background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
       }
-  
+
       .dogEar-small2 {
         background-image: linear-gradient(45deg, transparent 50%, #14814E 50%);
       }
-  
+
       .bubble {
         height: auto;
         width: auto;
@@ -173,9 +188,9 @@
         height: calc(100% - 3px);
         bottom: 0;
         right: 0;
-        max-width: 560px;
+        max-width: 800px;
       }
-  
+
       .bubble-1 {
         animation: grow-1 15s ease-in 0s 1 normal both running;
         background-color: #76A2CD;
@@ -183,40 +198,37 @@
         border-top-right-radius: 0;
         border-top-left-radius: 0;
         width: 68%;
-        bottom: 8px;
+        top: 0;
         opacity: .8;
+        height: 65%;
       }
-  
+
       .bubble-2 {
         animation: grow-2 15s ease-in 0s 1 normal both running;
         background-color: #555559;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-top: 52px;
-        bottom: 8px;
-        width: 540px;
+        border: 20px;
+        top: 8px;
+        width: 638px;
+        height: 67%;
+        left: 0;
       }
-  
+
       .bubble-3 {
         animation: grow-3 15s ease-in 0s 1 normal both running;
         background-color: #14814E;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        margin-top: 6px;
-        width: 520px;
-        margin-left: 10px;
-        margin-right: 21px;
+        width: 720px;
+        bottom: 11px;
+        height: 67%;
+        left: 25px;
       }
-  
+
       .logo {
-        height: 90px;
-        width: 168px;
+        height: 250px;
+        width: 170px;
         display: inline-block;
         vertical-align: top;
       }
-  
+
       .outerbubble {
         animation: grow-1 15s ease-in 0s 1 normal both running;
         width: 86px;
@@ -231,71 +243,73 @@
         z-index: 999;
         opacity: .5;
       }
-  
+
       .outerbubble-2 {
         animation: grow-3 15s ease-in 0s 1 normal both running;
         width: 86px;
-        height: 37px;
+        height: 88px;
         background-color: #76A2CD;
         border-radius: 15px;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
         position: absolute;
         -ms-transform: scale(0);
         transform: scale(0);
         z-index: 999;
         opacity: .5;
+        top: 14px;
       }
-  
+
       .outerbubble-3 {
         animation: grow-2 15s ease-in 0s 1 normal both running;
-        width: 127px;
-        height: 75px;
         background-color: #14814E;
-        border-top-left-radius: 15px;
         position: absolute;
         -ms-transform: scale(0);
         transform: scale(0);
         z-index: 999;
-        opacity: .5;
-        bottom: -31px;
-        right: 0;
+        opacity: .8;
+        border-radius: 20px;
+        bottom: 8px;
+        height: 116px;
+        width: 176px;
+        right: 105px;
       }
-  
+
       button {
         border-radius: 15px;
         border: none;
         background: #cc5500;
         color: white;
-        padding: 5px 15px;
-        font-size: 9px;
+        padding: 10px 30px;
+        font-size: 12px;
         letter-spacing: 0.25px;
         text-transform: uppercase;
       }
-  
+
       .button-holder {
         display: flex;
         height: 100%;
         align-items: flex-end;
         margin-bottom: 40px;
       }
-  
+
       .content {
         display: flex;
         flex-direction: row;
         height: 100%;
       }
-  
+
       .copy {
         width: 70%;
         white-space: normal;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
       }
-  
+
       .copy-2 {
-        width: 28%;
+        width: 45%;
         margin-left: 20px;
       }
-  
+
       .content-2 {
         display: flex;
         flex-direction: row;
@@ -303,7 +317,7 @@
         justify-content: center;
         align-items: center;
       }
-  
+
       .content-3 {
         display: flex;
         flex-direction: row;
@@ -311,33 +325,35 @@
         justify-content: center;
         align-items: center;
       }
-  
+
       .copy p {
         margin-bottom: 0;
+        margin-top: 0;
+        font-size: 30px;
       }
-  
+
       .copy-2 p {
         margin-bottom: 0;
         margin-top: 0;
       }
-  
+
       .copy-3 {
-        width: 44%;
+        width: 46%;
       }
-  
+
       .quote {
         font-size: 12px;
         text-align: right;
         padding-right: 16px;
       }
-  
+
       .logo div {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
       }
-  
+
       .icon-pay {
         margin: 0;
       }
@@ -353,11 +369,11 @@
             <div class="copy">
               <p>"Clients can pay for my services with just the click of a button."</p>
               <div class="quote">--- Current LawPay Customer</div>
-              <div class="dogEar dogEar-left"></div>
+              <div class="dogEar dogEar-left dogEar970"></div>
             </div>
           </div>
         </div>
-        <div class="outerbubble-3"></div>
+        <div class="outerbubble-3"><div class="dogEar dogEar-3"></div></div>
         <div class="bubble bubble-2">
           <div class="content-2">
             <div class="icon-money icon-2">
@@ -365,7 +381,7 @@
             </div>
             <div class="copy-2">
               <p>Simplify billing for you and your clients.</p>
-              <div class="dogEar dogEar-small"></div>
+              <div class="dogEar dogEar-small dogEar970"></div>
             </div>
           </div>
         </div>
@@ -379,6 +395,7 @@
             </div>
             <div class="copy-3">
               <p>The #1 payment solution trusted by lawyers</p>
+              <div class="dogEar dogEar-left-2 dogEar970"></div>
             </div>
             <div class="button-holder">
               <button>Learn More</button>
