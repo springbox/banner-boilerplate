@@ -1,5 +1,16 @@
 # HTML Banner boilerplate
 
+This is a repo bbal cloned to build the ads, but realized we needed exactly zero of what the guy provided.  So don't bother with gulp, npm install, etc.  This is just pure CSS/HTML/vanilla JS.
+
+To see what an add looks like, open the custom.html file from each of the src/ad/SIZE folders.
+
+
+
+
+
+
+
+# DISREGARD ALL BELOW
 > ## Work in progress, still writing this thing up
 
 Base setup for an automated HTML5 banner ad project using Gulp
