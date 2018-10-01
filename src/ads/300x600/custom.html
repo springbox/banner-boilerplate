@@ -89,6 +89,10 @@
         top: 0px;
       }
     }
+    body {
+      margin: 0;
+    }
+
     .adBanner {
       width: 300px;
       height: 600px;
@@ -101,7 +105,7 @@
       animation: hideBackground 15s normal both running;
       background: url(images/lady.png) no-repeat;
       width: 100%;
-      height: 197px;
+      height: 547px;
       position: relative;
     }
 
@@ -117,7 +121,10 @@
       -ms-transform: scale(0);
       transform: scale(0);
       border-radius: 35px;
-      /* opacity: 0.8; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 30px;
       padding: 20px;
       padding-top: 32px;
       bottom: 0;
@@ -140,6 +147,21 @@
       background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
     }
 
+
+    .dogEar-1-600 {
+      background-image: linear-gradient(-45deg, transparent 50%, #76A2CD 50%);
+      width: 50px;
+      height: 43px;
+      bottom: -38px;
+    }
+
+    .dogEar-2-600 {
+      background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
+      width: 50px;
+      height: 43px;
+      bottom: -38px;
+    }
+
     .dogEar-small {
       background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
     }
@@ -153,7 +175,10 @@
     }
 
     .dogEar-small2 {
-      background-image: linear-gradient(45deg, transparent 50%, #14814E 50%);
+      background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
+      width: 50px;
+      height: 43px;
+      bottom: -38px;
     }
 
     .bubble-1 {
@@ -165,16 +190,21 @@
       margin-left: 20px;
       padding-top: 50px;
       opacity: .8;
+      height: 84%;
+    }
+
+    .bubble-1 p {
+      margin-bottom: 10px;
     }
 
     .bubble-2 {
       animation: grow-2 15s ease-in 0s 1 normal both running;
       background-color: #555559;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
+      border-radius: 15px;
       margin-left: 20px;
       margin-right: 20px;
       padding-top: 52px;
+      height: 79%;
     }
 
     .bubble-3 {
@@ -184,6 +214,7 @@
       border-bottom-right-radius: 0;
       margin-top: 6px;
       margin-left: 20px;
+      height: 86%;
     }
 
     .logo {
@@ -195,7 +226,7 @@
     .outerbubble {
       animation: grow-1 15s ease-in 0s 1 normal both running;
       width: 86px;
-      height: 37px;
+      height: 45px;
       background-color: #555559;
       border-radius: 15px;
       border-top-right-radius: 0;
@@ -204,35 +235,33 @@
       -ms-transform: scale(0);
       transform: scale(0);
       z-index: 999;
-      opacity: .5;
+      opacity: .8;
     }
 
     .outerbubble-2 {
       animation: grow-3 15s ease-in 0s 1 normal both running;
-      width: 86px;
-      height: 37px;
+      width: 81px;
+      height: 76px;
       background-color: #76A2CD;
-      border-radius: 15px;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
+      border-bottom-right-radius: 15px;
       position: absolute;
       -ms-transform: scale(0);
       transform: scale(0);
       z-index: 999;
-      opacity: .5;
+      opacity: .8;
     }
 
     .outerbubble-3 {
       animation: grow-2 15s ease-in 0s 1 normal both running;
       width: 97px;
       height: 75px;
-      background-color: #76A2CD;
+      background-color:#14814E;
       border-top-left-radius: 15px;
       position: absolute;
       -ms-transform: scale(0);
       transform: scale(0);
       z-index: 999;
-      opacity: .5;
+      opacity: .8;
       bottom: -53px;
       right: 0;
     }
@@ -242,8 +271,8 @@
       border: none;
       background: #cc5500;
       color: white;
-      padding: 5px 15px;
-      font-size: 9px;
+      padding: 10px 30px;
+      font-size: 14px;
       letter-spacing: 0.25px;
       text-transform: uppercase;
     }
@@ -256,29 +285,35 @@
     .logo img {
       padding-left: 20px;
     }
+
+    .quote {
+      font-size: 12px;
+    }
   </style>
+  
   <div class="container">
     <div class="backgroundImage">
       <div class="outerbubble">
           <div class="dogEar dogEar-small"></div>
       </div>
       <div class="bubble bubble-1">
-        <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
+        <div class="icon-money icon"><img src="./images/pay_Icon.png" /></div>
+        <p>"Clients can pay for my services with just the click of a button."</p>
         <div class="quote">--- Current LawPay Customer</div>
-        <div class="dogEar dogEar-1"></div>
+        <div class="dogEar dogEar-1-600"></div>
       </div>
       <div class="outerbubble-3"></div>
       <div class="bubble bubble-2">
         <div class="icon-money icon"><img src="./images/bill_Icon.png" /></div>
-        <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
-        <div class="dogEar dogEar-small"></div>
+        <p>Simplify billing for you and your clients</p>
+        <div class="dogEar dogEar-2-600"></div>
       </div>
       <div class="outerbubble-2">
         <div class="dogEar dogEar-1"></div>
       </div>
       <div class="bubble bubble-3">
-        <div class="icon-pay icon"><img src="./images/pay_Icon.png" /></div>
-        <p>Choose the #1 payment solution trusted by lawyers</p>
+        <div class="icon-pay icon"><img src="./images/stars_Icon.png" /></div>
+        <p>The #1 payment solution trusted by lawyers</p>
         <div class="button-holder">
           <button>Learn More</button>
         </div>
@@ -287,22 +322,4 @@
     </div>
     <div class="logo"><img src="./images/Lawpay_logo.png" /></div>
   </div>
-
-  <!-- <div class="bubble bubble-1">
-    <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
-    <div class="quote">--- Current LawPay Customer</div>
-    <div class="dogEar dogEar-1"></div>
-  </div>
-  <div class="bubble bubble-2">
-    <i class="icon-money">.</i>
-    <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
-    <div class="dogEar dogEar-2"></div>
-  </div>
-  <div class="bubble bubble-3">
-    <i class="icon-pay">.</i>
-    <p>Choose the #1 payment solution trusted by lawyers</p>
-    <button>Learn More</button>
-    <div class="dogEar dogEar-3"></div>
-  </div> -->
-
 </div>
