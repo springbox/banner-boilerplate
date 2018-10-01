@@ -1,9 +1,326 @@
-<!-- Make sure you use the correct tags for the correct jobs.
-If you are separating your ad into different sections, use the section tag. -->
-<section id="frame1" class="centerV">
+<div class="adBanner" onclick="adClick();">
+  <script>
+    function adClick() {
+      console.log('clicked!')
+    }
+  </script>
+  <style>
+    @-webkit-keyframes grow-1 {
+      0% {
+        transform:scale(0);
+      }
+      5% {
+        transform:scale(1);
+      }
+      30% {
+        transform:scale(1);
+      }
+      33% {
+        transform:scale(0);
+      }
+      100% {
+        transform:scale(0);
+      }
+    }
+    @-webkit-keyframes grow-2 {
+      0% {
+        transform:scale(0);
+      }
+      33% {
+        transform:scale(0);
+      }
+      38% {
+        transform:scale(1);
+      }
+      60% {
+        transform:scale(1);
+      }
+      66% {
+        transform:scale(0);
+      }
+      100% {
+        transform:scale(0)
+      }
+    }
+    @-webkit-keyframes grow-3 {
+      0% {
+        transform:scale(0);
+      }
+      66% {
+        transform:scale(0);
+      }
+      70% {
+        transform:scale(1);
+      }
+      95% {
+        transform:scale(1);
+      }
+      100% {
+        transform:scale(1);
+      }
+    }
 
-  <p>Oh my!</p>
-  <p>fully animated text that wraps around!</p>
-  <p>Webfonts for the win!</p>
+    @-webkit-keyframes hideBackground {
+      0% {
+        background-position-y: initial;
+      }
+      33% {
+        background-position-y: initial;
+      }
+      38% {
+        background-position-y: 600px;
+      }
+      100% {
+        background-position-y: 600px;
+      }
+    }
 
-</section>
+    @-webkit-keyframes showBubble {
+      0% {
+        top: -600px;
+      }
+      4.9% {
+        top: -600px;
+      }
+      5% {
+        top: 0px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
+    body {
+      margin: 0;
+    }
+
+    .adBanner {
+      width: 160px;
+      height: 600px;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .backgroundImage {
+      animation: hideBackground 15s normal both running;
+      background: url(images/lady.png) no-repeat;
+      width: 100%;
+      height: 547px;
+      position: relative;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    .bubble {
+      height: auto;
+      width: auto;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      border-radius: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px;
+      padding: 20px;
+      padding-top: 32px;
+      bottom: 0;
+    }
+
+    .container {
+      height: 100%;
+      background: white;
+      overflow: hidden;
+    }
+
+    .dogEar {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: -25px;
+      right: 35px;
+    }
+
+    .dogEar-1 {
+      background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
+    }
+
+
+    .dogEar-1-600 {
+      background-image: linear-gradient(-45deg, transparent 50%, #76A2CD 50%);
+      height: 37px;
+      bottom: -35px;
+      right: -2px;
+      overflow: hidden;
+    }
+
+    .dogEar-2-600 {
+      background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
+      width: 50px;
+      height: 43px;
+      bottom: -38px;
+    }
+
+    .dogEar-small {
+      background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
+    }
+
+    .dogEar-2 {
+      background-image: linear-gradient(-45deg, transparent 50%, #555559 50%);
+    }
+
+    .dogEar-3 {
+      background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
+    }
+
+    .dogEar-small2 {
+      background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
+      width: 50px;
+      height: 43px;
+      bottom: -38px;
+      right: -21px;
+    }
+
+    .bubble-1 {
+      animation: grow-1 15s ease-in 0s 1 normal both running;
+      background-color: #76A2CD;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 6px;
+      margin-left: 20px;
+      padding-top: 20px;
+      opacity: .8;
+      height: 89%;
+    }
+
+    .bubble-1 p {
+      margin-bottom: 10px;
+    }
+
+    .bubble-2 {
+      animation: grow-2 15s ease-in 0s 1 normal both running;
+      background-color: #555559;
+      border-radius: 15px;
+      margin-left: 20px;
+      padding-top: 52px;
+      height: 79%;
+    }
+
+    .bubble-3 {
+      animation: grow-3 15s ease-in 0s 1 normal both running;
+      background-color: #14814E;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 6px;
+      margin-left: 20px;
+      height: 86%;
+    }
+
+    .logo {
+      height: 53px;
+      display: flex;
+      align-items: center;
+    }
+
+    .outerbubble {
+      animation: grow-1 15s ease-in 0s 1 normal both running;
+      width: 86px;
+      height: 45px;
+      background-color: #555559;
+      border-radius: 15px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .8;
+    }
+
+    .outerbubble-2 {
+      animation: grow-3 15s ease-in 0s 1 normal both running;
+      width: 81px;
+      height: 76px;
+      background-color: #76A2CD;
+      border-bottom-right-radius: 15px;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .8;
+    }
+
+    .outerbubble-3 {
+      animation: grow-2 15s ease-in 0s 1 normal both running;
+      width: 97px;
+      height: 75px;
+      background-color:#14814E;
+      border-top-left-radius: 15px;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .8;
+      bottom: -53px;
+      right: -67px;
+    }
+
+    button {
+      border-radius: 15px;
+      border: none;
+      background: #cc5500;
+      color: white;
+      padding: 10px 15px;
+      font-size: 10px;
+      letter-spacing: 0.25px;
+      text-transform: uppercase;
+    }
+
+    .button-holder {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo img {
+      padding-left: 20px;
+    }
+
+    .quote {
+      font-size: 12px;
+    }
+  </style>
+  
+  <div class="container">
+    <div class="backgroundImage">
+      <div class="outerbubble">
+          <div class="dogEar dogEar-small"></div>
+      </div>
+      <div class="bubble bubble-1">
+        <div class="icon-money icon"><img src="./images/pay_Icon.png" /></div>
+        <p>"Clients can pay for my services with just the click of a button."</p>
+        <div class="quote">--- Current LawPay Customer</div>
+        <div class="dogEar dogEar-1-600"></div>
+      </div>
+      <div class="outerbubble-3"></div>
+      <div class="bubble bubble-2">
+        <div class="icon-money icon"><img src="./images/bill_Icon.png" /></div>
+        <p>Simplify billing for you and your clients</p>
+      </div>
+      <div class="outerbubble-2">
+        <div class="dogEar dogEar-1"></div>
+      </div>
+      <div class="bubble bubble-3">
+        <div class="icon-pay icon"><img src="./images/stars_Icon.png" /></div>
+        <p>The #1 payment solution trusted by lawyers</p>
+        <div class="button-holder">
+          <button>Learn More</button>
+        </div>
+        <div class="dogEar dogEar-small2"></div>
+      </div>
+    </div>
+    <div class="logo"><img src="./images/Lawpay_logo.png" /></div>
+  </div>
+</div>
