@@ -1,0 +1,308 @@
+<div class="adBanner" onclick="adClick();">
+  <script>
+    function adClick() {
+      console.log('clicked!')
+    }
+  </script>
+  <style>
+    @-webkit-keyframes grow-1 {
+      0% {
+        transform:scale(0);
+      }
+      5% {
+        transform:scale(1);
+      }
+      30% {
+        transform:scale(1);
+      }
+      33% {
+        transform:scale(0);
+      }
+      100% {
+        transform:scale(0);
+      }
+    }
+    @-webkit-keyframes grow-2 {
+      0% {
+        transform:scale(0);
+      }
+      33% {
+        transform:scale(0);
+      }
+      38% {
+        transform:scale(1);
+      }
+      60% {
+        transform:scale(1);
+      }
+      66% {
+        transform:scale(0);
+      }
+      100% {
+        transform:scale(0)
+      }
+    }
+    @-webkit-keyframes grow-3 {
+      0% {
+        transform:scale(0);
+      }
+      66% {
+        transform:scale(0);
+      }
+      70% {
+        transform:scale(1);
+      }
+      95% {
+        transform:scale(1);
+      }
+      100% {
+        transform:scale(1);
+      }
+    }
+
+    @-webkit-keyframes hideBackground {
+      0% {
+        background-position-y: initial;
+      }
+      33% {
+        background-position-y: initial;
+      }
+      38% {
+        background-position-y: 600px;
+      }
+      100% {
+        background-position-y: 600px;
+      }
+    }
+
+    @-webkit-keyframes showBubble {
+      0% {
+        top: -600px;
+      }
+      4.9% {
+        top: -600px;
+      }
+      5% {
+        top: 0px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
+    .adBanner {
+      width: 300px;
+      height: 600px;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .backgroundImage {
+      animation: hideBackground 15s normal both running;
+      background: url(images/lady.png) no-repeat;
+      width: 100%;
+      height: 197px;
+      position: relative;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    .bubble {
+      height: auto;
+      width: auto;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      border-radius: 35px;
+      /* opacity: 0.8; */
+      padding: 20px;
+      padding-top: 32px;
+      bottom: 0;
+    }
+
+    .container {
+      height: 100%;
+      background: white;
+    }
+
+    .dogEar {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: -25px;
+      right: 35px;
+    }
+
+    .dogEar-1 {
+      background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
+    }
+
+    .dogEar-small {
+      background-image: linear-gradient(45deg, transparent 50%, #555559 50%);
+    }
+
+    .dogEar-2 {
+      background-image: linear-gradient(-45deg, transparent 50%, #555559 50%);
+    }
+
+    .dogEar-3 {
+      background-image: linear-gradient(-45deg, transparent 50%, #14814E 50%);
+    }
+
+    .dogEar-small2 {
+      background-image: linear-gradient(45deg, transparent 50%, #14814E 50%);
+    }
+
+    .bubble-1 {
+      animation: grow-1 15s ease-in 0s 1 normal both running;
+      background-color: #76A2CD;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 6px;
+      margin-left: 20px;
+      padding-top: 50px;
+      opacity: .8;
+    }
+
+    .bubble-2 {
+      animation: grow-2 15s ease-in 0s 1 normal both running;
+      background-color: #555559;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-top: 52px;
+    }
+
+    .bubble-3 {
+      animation: grow-3 15s ease-in 0s 1 normal both running;
+      background-color: #14814E;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 6px;
+      margin-left: 20px;
+    }
+
+    .logo {
+      height: 53px;
+      display: flex;
+      align-items: center;
+    }
+
+    .outerbubble {
+      animation: grow-1 15s ease-in 0s 1 normal both running;
+      width: 86px;
+      height: 37px;
+      background-color: #555559;
+      border-radius: 15px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .5;
+    }
+
+    .outerbubble-2 {
+      animation: grow-3 15s ease-in 0s 1 normal both running;
+      width: 86px;
+      height: 37px;
+      background-color: #76A2CD;
+      border-radius: 15px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .5;
+    }
+
+    .outerbubble-3 {
+      animation: grow-2 15s ease-in 0s 1 normal both running;
+      width: 97px;
+      height: 75px;
+      background-color: #76A2CD;
+      border-top-left-radius: 15px;
+      position: absolute;
+      -ms-transform: scale(0);
+      transform: scale(0);
+      z-index: 999;
+      opacity: .5;
+      bottom: -53px;
+      right: 0;
+    }
+
+    button {
+      border-radius: 15px;
+      border: none;
+      background: #cc5500;
+      color: white;
+      padding: 5px 15px;
+      font-size: 9px;
+      letter-spacing: 0.25px;
+      text-transform: uppercase;
+    }
+
+    .button-holder {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo img {
+      padding-left: 20px;
+    }
+  </style>
+  <div class="container">
+    <div class="backgroundImage">
+      <div class="outerbubble">
+          <div class="dogEar dogEar-small"></div>
+      </div>
+      <div class="bubble bubble-1">
+        <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
+        <div class="quote">--- Current LawPay Customer</div>
+        <div class="dogEar dogEar-1"></div>
+      </div>
+      <div class="outerbubble-3"></div>
+      <div class="bubble bubble-2">
+        <div class="icon-money icon"><img src="./images/bill_Icon.png" /></div>
+        <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
+        <div class="dogEar dogEar-small"></div>
+      </div>
+      <div class="outerbubble-2">
+        <div class="dogEar dogEar-1"></div>
+      </div>
+      <div class="bubble bubble-3">
+        <div class="icon-pay icon"><img src="./images/pay_Icon.png" /></div>
+        <p>Choose the #1 payment solution trusted by lawyers</p>
+        <div class="button-holder">
+          <button>Learn More</button>
+        </div>
+        <div class="dogEar dogEar-small2"></div>
+      </div>
+    </div>
+    <div class="logo"><img src="./images/Lawpay_logo.png" /></div>
+  </div>
+
+  <!-- <div class="bubble bubble-1">
+    <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
+    <div class="quote">--- Current LawPay Customer</div>
+    <div class="dogEar dogEar-1"></div>
+  </div>
+  <div class="bubble bubble-2">
+    <i class="icon-money">.</i>
+    <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
+    <div class="dogEar dogEar-2"></div>
+  </div>
+  <div class="bubble bubble-3">
+    <i class="icon-pay">.</i>
+    <p>Choose the #1 payment solution trusted by lawyers</p>
+    <button>Learn More</button>
+    <div class="dogEar dogEar-3"></div>
+  </div> -->
+
+</div>
