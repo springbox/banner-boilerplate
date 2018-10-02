@@ -4,6 +4,7 @@
       console.log('clicked!')
     }
   </script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">
   <style>
     @-webkit-keyframes grow-1 {
       0% {
@@ -93,7 +94,7 @@
       width: 300px;
       height: 250px;
       position: relative;
-      font-family: sans-serif;
+      font-family: "Nunito";
       color: white;
     }
 
@@ -137,7 +138,7 @@
     }
 
     .dogEar-1 {
-      background-image: linear-gradient(45deg, transparent 50%, #76A2CD 50%);
+      background-image: linear-gradient(45deg, transparent 50%, #0057ab 50%);
     }
 
     .dogEar-small {
@@ -158,12 +159,11 @@
 
     .bubble-1 {
       animation: grow-1 15s ease-in 0s 1 normal both running;
-      background-color: #76A2CD;
+      background-color: #0057ab;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       margin-top: 6px;
       margin-left: 20px;
-      padding-top: 50px;
       opacity: .8;
     }
 
@@ -211,7 +211,7 @@
       animation: grow-3 15s ease-in 0s 1 normal both running;
       width: 86px;
       height: 37px;
-      background-color: #76A2CD;
+      background-color: #0057ab;
       border-radius: 15px;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
@@ -226,7 +226,7 @@
       animation: grow-2 15s ease-in 0s 1 normal both running;
       width: 97px;
       height: 75px;
-      background-color: #76A2CD;
+      background-color: #0057ab;
       border-top-left-radius: 15px;
       position: absolute;
       -ms-transform: scale(0);
@@ -240,7 +240,7 @@
     button {
       border-radius: 15px;
       border: none;
-      background: #cc5500;
+      background: #e96b29;
       color: white;
       padding: 5px 15px;
       font-size: 9px;
@@ -263,14 +263,15 @@
           <div class="dogEar dogEar-small"></div>
       </div>
       <div class="bubble bubble-1">
-        <p>"LawPay is a great platform for small law firms to accept credit card payments from clients."</p>
+        <div class="icon-money icon"><img src="./images/pay_Icon.png" /></div>
+        <p>"Clients can pay for my services with just the click of a button."</p>
         <div class="quote">--- Current LawPay Customer</div>
         <div class="dogEar dogEar-1"></div>
       </div>
       <div class="outerbubble-3"></div>
       <div class="bubble bubble-2">
         <div class="icon-money icon"><img src="./images/bill_Icon.png" /></div>
-        <p>Accept online payments in compliance with ABA and IOLTA guidelines</p>
+        <p>Simplify billing for you and your clients</p>
         <div class="dogEar dogEar-small"></div>
       </div>
       <div class="outerbubble-2">
@@ -278,7 +279,7 @@
       </div>
       <div class="bubble bubble-3">
         <div class="icon-pay icon"><img src="./images/stars_Icon.png" /></div>
-        <p>Choose the #1 payment solution trusted by lawyers</p>
+        <p>The #1 payment solution trusted by lawyers</p>
         <div class="button-holder">
           <button>Learn More</button>
         </div>
